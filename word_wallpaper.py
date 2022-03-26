@@ -2,10 +2,9 @@
 from PIL import Image
 from PIL import ImageDraw
 from PIL import ImageFont
-from os import system,popen
-from pynput.keyboard import Key, Listener
+from os import system
+from pynput.keyboard import Listener
 from pathlib import Path
-import threading
 
 h=Path.home()
 word = ""
