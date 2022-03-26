@@ -17,7 +17,7 @@ def change(x):
 	myFont = ImageFont.truetype('FreeMono.ttf', 100)
 	I1.text((250, 800), x, font=myFont, fill =(255, 0, 0))
 	img.save(f"{h}/bg.png")
-	system(f"gsettings set org.gnome.desktop.background picture-uri file:////{h}/bg.png")
+	system(f"gsettings set org.gnome.desktop.background picture-uri file:///{h}/bg.png")
 def on_press(key):
 	global word,cou,en
 	if len(str(key)) == 3:
@@ -44,7 +44,7 @@ def on_press(key):
 		en=0
 		cou=0
 		word=""
-		system(f"gsettings set org.gnome.desktop.background picture-uri file:////{h}/black.jpg")
+		system(f"gsettings set org.gnome.desktop.background picture-uri file:///{h}/black.jpg")
 
 with Listener(on_press=on_press) as listener:
 	listener.join()
