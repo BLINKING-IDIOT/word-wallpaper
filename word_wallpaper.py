@@ -10,7 +10,7 @@ h=Path(__file__).parent.resolve()
 word = ""
 cou=0
 en=0
-
+system(f"gsettings set org.gnome.desktop.background picture-uri file:///{h}/black.jpg")
 def change(x):
 	img = Image.open(f'{h}/black.jpg')
 	I1 = ImageDraw.Draw(img)
