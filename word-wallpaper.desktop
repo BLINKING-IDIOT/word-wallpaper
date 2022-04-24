@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Exec=word-wallpaper
+Hidden=false
+NoDisplay=false
+X-GNOME-Autostart-enabled=true
+Name[en_IN]=word-wallpaper
+Name=word-wallpaper
+Comment[en_IN]=
+Comment=
+Terminal=false

@@ -5,19 +5,18 @@ from PIL import ImageFont
 from os import system
 from pynput.keyboard import Listener
 from pathlib import Path
-
-h=Path(__file__).parent.resolve()
+home=Path.home()
 word = ""
 cou=0
 en=0
-system(f"gsettings set org.gnome.desktop.background picture-uri file:///{h}/black.jpg")
+system(f"gsettings set org.gnome.desktop.background picture-uri file:////usr/share/word-wallpaper/black.jpg")
 def change(x):
-	img = Image.open(f'{h}/black.jpg')
+	img = Image.open('/usr/share/word-wallpaper/black.jpg')
 	I1 = ImageDraw.Draw(img)
 	myFont = ImageFont.truetype('FreeMono.ttf', 100)
 	I1.text((250, 800), x, font=myFont, fill =(255, 0, 0))
-	img.save(f"{h}/bg.png")
-	system(f"gsettings set org.gnome.desktop.background picture-uri file:///{h}/bg.png")
+	img.save(f"{home}/bg.png")
+	system(f"gsettings set org.gnome.desktop.background picture-uri file:///{home}/bg.png")
 def on_press(key):
 	global word,cou,en
 	if len(str(key)) == 3:
@@ -44,7 +43,7 @@ def on_press(key):
 		en=0
 		cou=0
 		word=""
-		system(f"gsettings set org.gnome.desktop.background picture-uri file:///{h}/black.jpg")
+		system(f"gsettings set org.gnome.desktop.background picture-uri file:////usr/share/word-wallpaper/black.jpg")
 
 with Listener(on_press=on_press) as listener:
 	listener.join()
