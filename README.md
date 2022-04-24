@@ -4,7 +4,7 @@ git clone https://github.com/BLINKING-IDIOT/word-wallpaper
   
 cd word-wallpaper
   
-pip3 install -r requirements.txt
+bash install.sh
   
-python3 word-wallpaper.py
+now relogin ;)
 </ol>
