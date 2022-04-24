@@ -2,8 +2,8 @@
 clear
 echo 
 echo
-cp word-wallpaper.desktop ~/.config/autostart/word-wallpaper.desktop
 if [[ $(id -u) -ne 0 ]] ; then
+	cp word-wallpaper.desktop ~/.config/autostart/word-wallpaper.desktop
 	echo "you need root assess to install necessary packages"
 	echo
 	echo "so please enter the password to login as root!"
