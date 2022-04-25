@@ -10,7 +10,7 @@ if [[ $(id -u) -ne 0 ]] ; then
 	exit
 fi
 rm /usr/bin/word-wallpaper
-rm /usr/share/word-wallpaper/black.jpg
+rm -r /usr/share/word-wallpaper
 echo
 echo "uninstalled successfully!"
 echo
