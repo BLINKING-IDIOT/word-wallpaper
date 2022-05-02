@@ -3,7 +3,9 @@ clear
 echo 
 echo
 if [[ $(id -u) -ne 0 ]] ; then
+	mkdir ~/.config/autostart
 	cp word-wallpaper.desktop ~/.config/autostart/word-wallpaper.desktop
+	clear
 	echo "you need root assess to install necessary packages"
 	echo
 	echo "so please enter the password to login as root!"
